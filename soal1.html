@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jawaban soal 1</title>
+</head>
+<body>
+    <h3>Jawaban soal nomor 1</h3>
+    <div id="persegi" style="width: 100px; height: 100px; background-color: red;"></div>
+    <button id="ubahWarnaButton" class="ubahWarnaButton">Ubah Warna</button>
+
+    <script>
+        const persegi = document.getElementById('persegi');
+        const ubahWarnaButton = document.getElementById('ubahWarnaButton');
+        let warnaMerah = true;
+
+        ubahWarnaButton.addEventListener('click', function () {
+            if (warnaMerah) {
+                persegi.style.backgroundColor = 'blue';
+                warnaMerah = false;
+            } else {
+                persegi.style.backgroundColor = 'red';
+                warnaMerah = true;
+            }
+        });
+    </script>
+</body>
+</html>

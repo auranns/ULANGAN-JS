@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawaban Soal Nomor 9</title>
+</head>
+<body>
+    <h3>Jawaban soal nomor 9</h3>
+    <p id="output"></p>
+
+    <script type="text/javascript">
+        let output = "";
+        for (let i = 10; i >= 1; i--) {
+            if (i === 1) {
+                output += `Anak ayam turun ${i}, mati satu tinggal ayam induk<br>`;
+            } else {
+                output += `Anak ayam turun ${i}, mati satu tinggal ${i - 1}<br>`;
+            }
+        }
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+</html>

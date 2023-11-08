@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jawaban nomor 10</title>
+</head>
+<body>
+    <form id="kembalianForm">
+        <label for="hargaBarang">Harga Barang:</label>
+        <input type="number" id="hargaBarang" min="0">
+        <br>
+        <label for="jumlahUang">Jumlah Uang:</label>
+        <input type="number" id="jumlahUang" min="0">
+        <br>
+        <button type="button" onclick="hitungKembalian()">Hitung Kembalian</button>
+    </form>
+
+    <p id="hasil"></p>
+
+    <script>
+        function hitungKembalian() {
+            const hargaBarang = parseFloat(document.getElementById("hargaBarang").value);
+            const jumlahUang = parseFloat(document.getElementById("jumlahUang").value);
+            const hasilElement = document.getElementById("hasil");
+
+            if (isNaN(hargaBarang) || isNaN(jumlahUang)) {
+                hasilElement.textContent = "Masukkan harga barang dan jumlah uang yang valid.";
+            } else if (jumlahUang < hargaBarang) {
+                hasilElement.textContent = "Uang yang dibayarkan kurang!";
+            } else {
+                const kembalian = jumlahUang - hargaBarang;
+                hasilElement.textContent = "Kembalian yang harus diberikan: " + kembalian;
+            }
+        }
+    </script>
+</body>
+</html>
